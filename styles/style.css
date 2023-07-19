@@ -90,9 +90,9 @@
 
 /* banner section start */
 
-.banner-container {
+.banner-container, .game-container{
    max-width: 1200px;
-   margin: auto;
+   margin: 15px auto;
    background-color: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
    border: 1px solid;
    display: flex;
@@ -100,7 +100,7 @@
 }
 
 
-.banner-content {
+.banner-content, .game-content{
    width: 50%;
    border: 1px solid;
 }
@@ -111,8 +111,8 @@
    font-weight: 600;
 }
 
-.banner-sub-title {
-   font-size: 95px;
+.banner-sub-title, .game-sub-title{
+   font-size: 5.5rem;
    font-weight: 800;
    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
    background-clip: text;
@@ -120,7 +120,6 @@
    -webkit-text-fill-color: transparent;
    margin-bottom: 24px;
 }
-
 
 .list-container li {
    display: flex;
@@ -147,17 +146,39 @@
    margin-left: 10px;
 }
 
-.banner-img {
+.banner-img, .game-img{
    width: 50%;
    border: 1px solid;
 }
 
-.banner-img img {
+.banner-img img, .game-img img{
    width: 100%;
 }
 
+/* gamer section start */
 
+.game-content{
+   text-align: right;
+}
+.game-sub-title{
+   font-size: 3rem;
+}
 
+.game-desc{
+   font-weight: 500;
+   color: #534C64;
+   margin-bottom: 20px;
+   margin: 0 auto 25px;
+}
+.game-caption{
+   color: #534C64;
+   margin: 8px 0;
+   font-size: 20px;
+}
+.game-caption-subtitle{
+   font-size: 23px;
+   color: #3C354F;
+}
 
 
 
@@ -167,7 +188,8 @@
 /* small or mobile device  */
 @media screen and (max-width: 576px) {
    .nav-container,
-   .menu-container
+   .menu-container,
+   .game-container
    {
       flex-direction: column;
       gap: 30px;
@@ -179,18 +201,23 @@
    }
 
    .banner-content,
-   .banner-img
+   .banner-img,
+   .game-img,
+   .game-content
    {
       width: 100%;
+      padding: 10px 15px;
    }
 }
 
 
 
 
-
+/* medium or tablet device */
 @media screen and (min-width: 577px) and (max-width: 768px) {
-   .nav-container {
+   .nav-container,
+   .game-container
+   {
       flex-direction: column;
       gap: 30px;
    }
@@ -202,8 +229,15 @@
    }
 
    .banner-content,
-   .banner-img
+   .banner-img,
+   .game-content,
+   .game-img
    {
       width: 100%;
+      text-align: center;
+      padding: 10px 15px;
+   }
+   .list-container li{
+      justify-content: center;
    }
 }
