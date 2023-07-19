@@ -28,7 +28,6 @@
 .nav-container {
    max-width: 1200px;
    margin: auto;
-   border: 1px solid;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -94,7 +93,6 @@
    max-width: 1200px;
    margin: 15px auto;
    background-color: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
-   border: 1px solid;
    display: flex;
    align-items: center;
 }
@@ -103,7 +101,6 @@
 .banner-content,
 .game-content {
    width: 50%;
-   border: 1px solid;
 }
 
 .banner-title {
@@ -152,7 +149,6 @@
 .banner-img,
 .game-img {
    width: 50%;
-   border: 1px solid;
 }
 
 .banner-img img,
@@ -192,7 +188,6 @@
 .online-game-section {
    max-width: 1200px;
    margin: 15px auto;
-   border: 1px solid;
    padding: 15px 0;
 }
 
@@ -224,10 +219,31 @@
 .card {
    /* transition: all 5s 5s; */
 }
-
+.card-img-contaiener{
+   position: relative;
+}
+.card-img-contaiener > p, .card-img-contaiener > .play-btn{
+   color: #FF42A5;
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+}
+.card-img-contaiener > .play-btn{
+   top: 45%;
+   display: none;
+}
 .card-img {
    width: 100%;
    margin-bottom: 15px;
+}
+.card:hover .card-img-contaiener > p{
+   display: block;
+}
+
+.card:hover .card-img-contaiener > .play-btn{
+   display: block;
 }
 
 .card:hover {
@@ -235,10 +251,13 @@
    border-radius: 16px;
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), lightgray 50% / cover no-repeat;
    background-blend-mode: overlay;
+
 }
 
 .card:hover .card-img {
-   background-image: linear-gradient(black, black);
+   filter: brightness(30%);
+   background-image: linear-gradient(to bottom rgba(0, 0,rgba(0, 0, 0, 0.609).839) 0%, black 100%);
+   border-radius: 16px;
    background-blend-mode: overlay;
 }
 
@@ -247,7 +266,6 @@
 .play-container-section {
    max-width: 1200px;
    margin: 45px auto;
-   border: 1px solid;
    padding: 25px 0;
    display: flex;
    align-items: center;
@@ -259,7 +277,6 @@
    /* padding-left: 50px; */
    width: 40%;
    text-align: right;
-   border: 1px solid;
 }
 
 .play-content h2 {
@@ -270,7 +287,6 @@
 
 .play-img {
    width: 50%;
-   border: 1px solid;
 }
 
 .play-img img {
@@ -286,7 +302,6 @@
 
 .left-align {
    width: 30%;
-   border: 1px solid;
 }
 
 .left-align h2 {
@@ -310,7 +325,6 @@
 .section-container {
    max-width: 1200px;
    margin: 100px auto;
-   border: 1px solid;
    padding: 15px 0;
 }
 
@@ -472,7 +486,6 @@ footer{
    }
 
    .featured-contaiener {
-      /* border: 1px solid; */
       flex-wrap: wrap;
    }
 
@@ -497,6 +510,7 @@ footer{
    }
    .icon-container{
       gap: 50px;
+      flex-wrap: wrap;
    }
 
 }
