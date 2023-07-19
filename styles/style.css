@@ -90,7 +90,8 @@
 
 /* banner section start */
 
-.banner-container, .game-container{
+.banner-container,
+.game-container {
    max-width: 1200px;
    margin: 15px auto;
    background-color: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
@@ -100,7 +101,8 @@
 }
 
 
-.banner-content, .game-content{
+.banner-content,
+.game-content {
    width: 50%;
    border: 1px solid;
 }
@@ -111,7 +113,8 @@
    font-weight: 600;
 }
 
-.banner-sub-title, .game-sub-title{
+.banner-sub-title,
+.game-sub-title {
    font-size: 5.5rem;
    font-weight: 800;
    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
@@ -132,9 +135,10 @@
    margin-bottom: 10px;
 }
 
-.btn-container{
+.btn-container {
    margin-top: 30px;
 }
+
 .secondary-btn {
    color: #FFF;
    font-size: 20px;
@@ -146,83 +150,269 @@
    margin-left: 10px;
 }
 
-.banner-img, .game-img{
+.banner-img,
+.game-img {
    width: 50%;
    border: 1px solid;
 }
 
-.banner-img img, .game-img img{
+.banner-img img,
+.game-img img {
    width: 100%;
 }
 
 /* gamer section start */
 
-.game-content{
+.game-content {
    text-align: right;
 }
-.game-sub-title{
+
+.game-sub-title {
    font-size: 3rem;
 }
 
-.game-desc{
+.game-desc {
    font-weight: 500;
    color: #534C64;
-   margin-bottom: 20px;
-   margin: 0 auto 25px;
+   margin: 20px 0;
 }
-.game-caption{
+
+.game-caption {
    color: #534C64;
    margin: 8px 0;
    font-size: 20px;
 }
-.game-caption-subtitle{
+
+.game-caption-subtitle {
    font-size: 23px;
    color: #3C354F;
 }
 
+/* online game section  */
 
+.online-game-section {
+   max-width: 1200px;
+   margin: 15px auto;
+   border: 1px solid;
+   padding: 15px 0;
+}
 
+.game-title {
+   text-align: center;
+}
+
+.text-gradient {
+   background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.game-paragraph {
+   text-align: center;
+   color: #534C64;
+   font-size: 18px;
+   line-height: 30px;
+   margin-bottom: 30px;
+}
+
+.card-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 30px;
+}
+
+.card {
+   /* transition: all 5s 5s; */
+}
+
+.card-img {
+   width: 100%;
+   margin-bottom: 15px;
+}
+
+.card:hover {
+   border: 3px solid #F948B2;
+   border-radius: 16px;
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), lightgray 50% / cover no-repeat;
+   background-blend-mode: overlay;
+}
+
+.card:hover .card-img {
+   background-image: linear-gradient(black, black);
+   background-blend-mode: overlay;
+}
+
+/* play game section  */
+
+.play-container-section {
+   max-width: 1200px;
+   margin: 45px auto;
+   border: 1px solid;
+   padding: 25px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+
+.play-content {
+   /* padding-left: 50px; */
+   width: 40%;
+   text-align: right;
+   border: 1px solid;
+}
+
+.play-content h2 {
+   font-size: 2.5rem;
+   font-weight: 700;
+   line-height: 60px;
+}
+
+.play-img {
+   width: 50%;
+   border: 1px solid;
+}
+
+.play-img img {
+   width: 100%;
+}
+.img-position{
+   width: 220px;
+   position: absolute;
+   bottom: -50px;
+   left: 530px;
+}
+
+.left-align {
+   width: 30%;
+   border: 1px solid;
+}
+.left-align h2 {
+   font-size: 2.5rem;
+   font-weight: 700;
+   line-height: 60px;
+   margin-bottom: 25px;
+}
+/* #play-section{
+   position: relative;
+} */
+.position-img{
+   width: 220px;
+   position: absolute;
+   bottom: -50px;
+   left: 530px;
+}
 
 
 /* responsiveness start  */
 /* small or mobile device  */
 @media screen and (max-width: 576px) {
+   .play-container-section,
    .nav-container,
    .menu-container,
-   .game-container
-   {
+   .game-container {
       flex-direction: column;
       gap: 30px;
    }
-   
-   .banner-container{
+
+   .banner-container,
+   #play-section
+   {
       flex-direction: column-reverse;
       gap: 30px;
    }
-
+   .play-content,
    .banner-content,
    .banner-img,
    .game-img,
-   .game-content
+   .game-content,
+   .card,
+   .play-img,
+   .left-align,
+   .img-container img
    {
       width: 100%;
       padding: 10px 15px;
    }
+   .game-content, .left-align,
+   .banner-content, .list-container,
+   .play-content
+   {
+      text-align: center;
+   }
+   .list-container li{
+      justify-content: center;
+   }
+
+   .card-container {
+      grid-template-columns: 1fr;
+   }
+
+   .banner-sub-title,
+   .banner-title {
+      font-size: 2.5rem;
+   }
+
+   .primary-btn,
+   .secondary-btn {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 10px 20px;
+   }
+   .play-content{
+      text-align: center;
+   }
+   
+   .play-img{
+      margin-left: auto;
+      width: 85%;
+   }
+   .img-position{
+      width: 120px;
+      bottom: 0px;
+      left: 20px;
+   }
+   .img-container{
+      margin-right: auto;
+      width: 85%;
+   }
+
+   /* .position-img{
+      width: 220px;
+      position: absolute;
+      bottom: -50px;
+      left: 530px;
+   } */
+   
+   .position-img{
+      width: 120px;
+      top: 240px;
+      left: 260px;
+   }
+   .left-align h2{
+      font-size: 2rem;
+   }
+
+
 }
+
 
 
 
 
 /* medium or tablet device */
 @media screen and (min-width: 577px) and (max-width: 768px) {
+
    .nav-container,
-   .game-container
+   .game-container,
+   .play-container-section
    {
       flex-direction: column;
       gap: 30px;
    }
 
-   .banner-container{
+   .banner-container {
       flex-direction: column-reverse;
       gap: 30px;
       margin-top: 30px;
@@ -231,13 +421,41 @@
    .banner-content,
    .banner-img,
    .game-content,
-   .game-img
+   .game-img,
+   .play-content,
+   .img-container img,
+   .left-align
    {
       width: 100%;
       text-align: center;
       padding: 10px 15px;
    }
-   .list-container li{
+
+   .list-container li {
       justify-content: center;
    }
+
+   .card-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .card {
+      margin: 15px;
+   }
+   /* .play-content{
+      width: 40%;
+   } */
+   .play-img, .img-container{
+      width: 70%;
+   }
+   .img-position{
+      width: 150px;
+      /* bottom: 0px; */
+      left: 550px;
+   }
+   .position-img{
+      width: 150px;
+      top: 350px;
+   }
+  
 }
